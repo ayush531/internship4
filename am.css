@@ -1,0 +1,515 @@
+.header {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-family: Poiret One;
+    text-align: center;
+    text-shadow: 2px 1px 2px;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 999;
+  }
+  .header .filter {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.4);
+    position: absolute;
+    left: 0px;
+    top: 0px;
+  }
+  .header .content-wrapper {
+    z-index: 2;
+  }
+  .header .content-wrapper .content {
+    position: relative;
+  }
+  .header .content-wrapper .content h1 {
+    margin: 0;
+    font-size: 4em;
+  }
+  .header p {
+    margin-top: 0.5em;
+    font-family: Josefin Sans, sans-serif;
+    margin-bottom: 5px;
+  }
+  .header a {
+    text-decoration: none;
+    color: #fff;
+    margin-left: 3px;
+    margin-right: 3px;
+    text-shadow: 2px 1px 2px;
+  }
+  #particles-js {
+    height:100%;
+    width:100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background-color: rgb(0, 0, 0);
+  }
+  /* Don't use inline-block and float */
+/* View it in full screen for best experience */
+/* https://codepen.io/Rafay12/full/poeGXXq */
+
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap");
+
+:root {
+  --Grey: #f6f6f6;
+  --Cyan: #03a9f4;
+  --Red: #b00020;
+  --Blue: #227093;
+  --Green: #218c74;
+  --DarkGrey: #333333;
+  --fb: #3B5998;
+  --twitter: #5da9dd;
+  --insta: #800080;
+  --wp: #07BC4C;
+  --github: #1b1f23;
+  --linkedin: #0077b5;
+  --disc: #404EED;
+  --mainPadding: 20px;
+}
+::selection {
+  color: #fff;
+  background: #000;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans", sans-serif;
+}
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #FFF;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--Cyan);
+}
+.center-f {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  margin: auto;
+  padding: var(--mainPadding);
+  width: 900px;
+  position: relative;
+}
+.main nav {
+  background-color: var(--Grey);
+}
+.main nav .container {
+  justify-content: space-between !important;
+}
+.main nav .container div.comp-name {
+  font-size: 22px;
+  font-weight: bold;
+}
+.main nav .container div.comp-name::before {
+  content: "\f3a5";
+  font-family: "Font Awesome 5 Free";
+  font-weight: bold;
+  font-size: 19px;
+  color: var(--Cyan);
+}
+.main nav .container div span {
+  position: relative;
+  margin: 0 10px;
+}
+.main nav .container div span::before,
+.main nav .container div span::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: var(--Cyan);
+  transition: 0.2s linear;
+}
+.main nav .container div span::after {
+  top: -2px;
+  right: 0;
+}
+.main nav .container div span:hover::before,
+.main nav .container div span:hover::after {
+  width: 100%;
+}
+.main nav .container div span a {
+  color: unset;
+  text-decoration: none;
+}
+.main header .container{
+  background: url(https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_960_720.jpg);
+  background-repeat: no-repeat;
+  height: calc(100vh - 70px);
+}
+.main header .container div {
+  width: 500px;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -100px;
+  margin-left: -217px;
+}
+.main header .container div h1 {
+  color: var(--Cyan);
+  font-size: 50px;
+  text-align: center;
+  margin-left: -27px;
+}
+.main header .container div p {
+  font-size: 19px;
+  font-weight: bold;
+  line-height: 1.8;
+  color: #FFF;
+}
+a.fes  {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  width: 40px;
+  height: 40px;
+  text-decoration: none;
+  color: #fff;
+  font-size: 16px;
+  background-color: var(--Cyan);
+  border-radius: 50%;
+  z-index: 3;
+}
+.main section.services {
+  background-color: var(--Grey);
+}
+.main section.services .container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column wrap;
+}
+.main section.services .container h1 span {
+  color: var(--Cyan);
+}
+.main section.services .container p {
+  text-align: center;
+  line-height: 1.8;
+  padding: var(--mainPadding) 0;
+}
+.main section.serv .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 30px;
+}
+.main section.serv .container div {
+  text-align: center;
+}
+.main section.serv .container img {
+  width: 80px;
+}
+.main section.serv .container p {
+  color: #777;
+}
+.main section.about {
+  background-color: var(--Grey);
+}
+.main section.about .container img {
+  width: 320px;
+  height: 220px;
+}
+.main section.about .container div {
+  display: inline-block;
+  margin-left: 30px;
+  padding: var(--mainPadding) 0;
+  width: calc(100% - 355px);
+}
+.main section.about .container div p {
+  margin-top: 30px;
+  line-height: 1.8;
+}
+.main section.nums .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  grid-gap: 30px;
+  margin: 30px auto;
+}
+.main section.nums .container div {
+  flex-flow: column wrap;
+  color: #fff;
+  padding: 20px;
+}
+.main section.nums .container div:first-child {
+  background-color: var(--Red);
+}
+.main section.nums .container div:nth-child(2) {
+  background-color: var(--Blue);
+}
+.main section.nums .container div:last-child {
+  background-color: var(--Green);
+}
+.main section.nums .container div p {
+  font-size: 26px;
+  font-weight: bold;
+}
+.main section.skills {
+  background-color: var(--Grey);
+}
+.main section.skills h1 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.main section.skills label{
+  text-align: right;
+  position: relative;
+}
+.main section.skills label::before {
+  content: "";
+  position: absolute;
+  background-repeat: no-repeat;
+  padding-left: -24px;
+  width: 24px;
+  height: 24px;
+}
+.main section.skills label.html::before {
+    background: url(https://i.ibb.co/QpwmG04/html.png);
+    left: 20px;
+}
+.main section.skills label.css::before {
+  background: url(https://i.ibb.co/ng6mqPp/css.png);
+  left: 37px;
+}
+.main section.skills label.js::before {
+  background: url(https://i.ibb.co/SmWYgh8/javascript.png);
+  left: -10px;
+}
+.main section.skills label.php::before {
+  background: url(https://i.ibb.co/FH7PT24/php.png);
+  left: 30px;
+}
+.main section.skills label.py::before {
+  background: url(https://i.ibb.co/GHzbjV2/python.png);
+  left: 10px;
+}
+.main section.skills .container div.bars {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: repeat(5, 1fr);
+}
+.main section.skills .container div.bars div.progbar {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 775px;
+  height: 30px;
+  margin: 0 0 10px 10px;
+}
+.main section.skills .container div.bars div.progbar::before {
+  content: attr(data-percent);
+  color: #FFF;
+  position: absolute;
+}
+
+.main section.skills .container div.bars div.skill-1 {
+  background: linear-gradient(90deg, var(--Cyan) 97%, #CCC  97%);
+}
+.main section.skills .container div.bars div.skill-1::before {
+  right: 30px;
+}
+
+.main section.skills .container div.bars div.skill-2 {
+  background: linear-gradient(90deg, var(--Cyan) 84%, #CCC  84%);
+}
+.main section.skills .container div.bars div.skill-2::before {
+  right: 130px;
+}
+
+.main section.skills .container div.bars div.skill-3 {
+  background: linear-gradient(90deg, var(--Cyan) 62%, #CCC  62%);
+}
+.main section.skills .container div.bars div.skill-3::before {
+  right: 300px;
+}
+
+.main section.skills .container div.bars div.skill-4 {
+  background: linear-gradient(90deg, var(--Cyan) 45%, #CCC 45%);
+}
+.main section.skills .container div.bars div.skill-4::before {
+  left: 308px;
+}
+
+.main section.skills .container div.bars div.skill-5 {
+  background: linear-gradient(90deg, var(--Cyan) 78%, #CCC  78%);
+}
+.main section.skills .container div.bars div.skill-5::before {
+  right: 180px;
+}
+.main section.contact .container h1 {
+  text-align: center;
+}
+.main section.contact .container div.icons {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 50px 0;
+}
+.icons .icon-container {
+  position: relative;
+  width: 75px;
+  height: 75px;
+  background-color: #EEE;
+  color: var(--Grey);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 10px;
+  border-radius: 25%;
+  cursor: pointer;
+  font-size: 36px;
+  text-decoration: none;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.icons .icon-container::before {
+  content: "";
+  width: 130%;
+  height: 130%;
+  position: absolute;
+  left: -110%;
+  transition: all 0.5s;
+  z-index: 1;
+}
+.icons .icon-container .icon {
+  transform: scale(0.7);
+  transition: all 0.35s;
+  z-index: 2;
+}
+.icons .icon-container.facebook {
+  color: var(--fb);
+}
+.icons .icon-container.twitter {
+  color: var(--twitter);
+}
+.icons .icon-container.instagram {
+  color: var(--insta);
+}
+.icons .icon-container.whatsapp {
+  color: var(--wp);
+}
+.icons .icon-container.github {
+  color: var(--github);
+}
+.icons .icon-container.linkedin {
+  color: var(--linkedin);
+}
+.icons .icon-container.discord {
+  color: var(--disc);
+}
+.icons .icon-container:hover .icon {
+  color: #FFF;
+  transform: scale(1);
+}
+.icons .icon-container:hover::before {
+  top: -15%;
+  left: -15%;
+}
+.icons .icon-container.facebook:hover::before {
+  background-color: var(--fb);
+}
+.icons .icon-container.twitter:hover::before {
+  background-color: var(--twitter);
+}
+.icons .icon-container.instagram:hover::before {
+  background-color: var(--insta);
+}
+.icons .icon-container.whatsapp:hover::before {
+  background-color: var(--wp);
+}
+.icons .icon-container.github:hover::before {
+  background-color: var(--github);
+}
+.icons .icon-container.linkedin:hover::before {
+  background-color: var(--linkedin);
+}
+.icons .icon-container.discord:hover::before {
+  background-color: var(--disc);
+}
+.number {
+  background-color: var(--wp);
+  color: #FFF;
+  position: absolute;
+  top: 200px;
+  left: 375px;
+  font-size: 18px;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.5s;
+  user-select: none;
+  opacity: 0;
+}
+.number::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -10px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent var(--wp) transparent;
+}
+.icons .icon-container.whatsapp:hover ~ .number {
+  opacity: 1;
+  user-select: all;
+}
+.tag {
+  background-color: var(--disc);
+  color: #FFF;
+  position: absolute;
+  top: 200px;
+  left: 745px;
+  font-size: 18px;
+  border-radius: 15px;
+  padding: 10px;
+  text-align: center;
+  transition: 0.5s;
+  user-select: none;
+  opacity: 0;
+}
+.tag::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  margin-left: -10px;
+  border-style: solid;
+  border-width: 10px;
+  border-color: transparent transparent var(--disc) transparent;
+}
+.icons .icon-container.discord:hover ~ .tag {
+  opacity: 1;
+  user-select: all;
+}
+.main footer {
+  background-color: var(--DarkGrey)
+}
+.main footer .container {
+  color: #FFF;
+  justify-content: space-between;
+}
+.main footer .container .fa-heart {
+  color: #b00020;
+}
+.main footer .container a {
+  text-decoration: none;
+  color: var(--Cyan);
+}
